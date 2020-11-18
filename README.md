@@ -21,7 +21,7 @@ Microsoft Teams Service Health and Message Center Notifications to SharePoint Li
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The project includes a simple Power Automate solution to stay informated about the Microsoft Teams Service Health status and upcoming changes to service that may require admininstrator attention.
+The project includes a simple Power Automate solution to stay informated about the Microsoft Teams Service Health status and upcoming changes to service that may require admininstrator attention. The flow will fetch every 20 Minutes the latest updates of the Office 365 Service Health and the Message Center using the Office 365 Management API. 
 
 ### Built With
 
@@ -51,16 +51,16 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 ```
 1. Create a SharePoint site or a Team
 
-> [!NOTE]
-> You can also use a already existing team or SharePoint site. 
+
+**Note:** You can also use a already existing team or SharePoint site. 
 
 1. Create an App Registration in Azure AD
 
-1. Import the SharePoint lists
+2. Import the SharePoint lists
 
-1. Import the Power Automate flow
+3. Import the Power Automate flow
 
-1. Adjust the values in the Power Automate
+4. Adjust the values in the Power Automate
 
 
 
