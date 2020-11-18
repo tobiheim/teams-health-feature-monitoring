@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.26.2010.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-7F27A698DB264B1687211DCED3F50FB6">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-7F27A698DB264B1687211DCED3F50FB6" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Message Center Notifications" Description="O365 Message Center Notifications for Microsoft Teams" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Message Center Notifications1" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Message Center Notifications1/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Message Center Notifications1/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Message Center Notifications1/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{2DED8E29-E3BD-45A4-8B5A-B44BFE5D449B}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Message Center Notifications1/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="MessageId" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Message" />
+                <FieldRef Name="LastUpdatedTime" />
+                <FieldRef Name="Category" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="BlogLink" />
+                <FieldRef Name="HelpLink" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="MessageId" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="MessageId" Title="MessageId" Type="Text" ID="{acec530a-b4c8-4563-bc73-2f0fb40abb9e}" SourceID="{{listid:Message Center Notifications}}" StaticName="MessageId" ColName="nvarchar4" RowOrdinal="0" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;0 2px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Category]&quot;,&quot;Plan For Change&quot;]},&quot;sp-css-backgroundColor-blockingBackground&quot;,&quot;&quot;]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;line-height&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;14px&quot;},&quot;attributes&quot;:{&quot;iconName&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Category]&quot;,&quot;Plan For Change&quot;]},&quot;Error&quot;,&quot;&quot;]}}},{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;[$MessageId]&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Category]&quot;,&quot;Plan For Change&quot;]},&quot;sp-field-bold&quot;,&quot;&quot;]}}}],&quot;templateId&quot;:&quot;ConditionalColumn&quot;}" Version="2" />
+            <Field AppendOnly="FALSE" DisplayName="Message" Format="Dropdown" IsModern="TRUE" IsolateStyles="FALSE" Name="Message" RichText="FALSE" RichTextMode="Compatible" Title="Message" Type="Note" ID="{39e360de-7428-4575-8e62-7bf2fa63dde1}" SourceID="{{listid:Message Center Notifications}}" StaticName="Message" ColName="ntext2" RowOrdinal="0" />
+            <Field DisplayName="Last Updated Time" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="LastUpdatedTime" Title="Last Updated Time" Type="Text" ID="{63d83da2-1aba-463a-8670-34fd7501a8b9}" SourceID="{{listid:Message Center Notifications}}" StaticName="LastUpdatedTime" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="Category" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Category" Title="Category" Type="Text" ID="{57f1b335-6c14-472d-87b8-f31c0058c876}" SourceID="{{listid:Message Center Notifications}}" StaticName="Category" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="ExternalLink" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="ExternalLink" Title="ExternalLink" Type="Text" ID="{ac33691f-3b18-44ad-81d3-d87edce0cb3c}" SourceID="{{listid:Message Center Notifications}}" StaticName="ExternalLink" ColName="nvarchar8" RowOrdinal="0" />
+            <Field DisplayName="BlogLink" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="BlogLink" Title="BlogLink" Type="Text" ID="{55c53aa2-88c2-4a1e-9a55-a7d3d080852e}" SourceID="{{listid:Message Center Notifications}}" StaticName="BlogLink" ColName="nvarchar9" RowOrdinal="0" />
+            <Field DisplayName="HelpLink" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="HelpLink" Title="HelpLink" Type="Text" ID="{cf3bd395-9a91-4cbc-8ec0-e3723ae345be}" SourceID="{{listid:Message Center Notifications}}" StaticName="HelpLink" ColName="nvarchar10" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://southcentralus1.pushnp.svc.ms/notifications?token=1f4a0c75-572c-4225-9c41-86b1d02444f6" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Service Health Notifications" Description="O365 Service Health Notifications for Microsoft Teams" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Message Center Notifications" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Message Center Notifications/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Message Center Notifications/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Message Center Notifications/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{C7E80998-7BAD-4E81-8AC3-B8D269C77BE0}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Message Center Notifications/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="Eventid" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Feature" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Messages" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="IncidentType" />
+                <FieldRef Name="StartTime" />
+                <FieldRef Name="LastUpdatedTime" />
+                <FieldRef Name="EndTime" />
+                <FieldRef Name="Clasification" />
+                <FieldRef Name="Severity" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Eventid" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Eventid" Title="Eventid" Type="Text" ID="{fdcbcb81-e0a7-469b-b015-18ece8d5caff}" SourceID="{{listid:Service Health Notifications}}" StaticName="Eventid" ColName="nvarchar4" RowOrdinal="0" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;0 2px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Service degradation&quot;]},&quot;sp-css-backgroundColor-blockingBackground50&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Service restored&quot;]},&quot;sp-css-backgroundColor-successBackground50&quot;,&quot;&quot;]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;line-height&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;14px&quot;},&quot;attributes&quot;:{&quot;iconName&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Service degradation&quot;]},&quot;Warning&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Service restored&quot;]},&quot;Like&quot;,&quot;&quot;]}]}}},{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;[$Eventid]&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Service degradation&quot;]},&quot;sp-field-bold&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Service restored&quot;]},&quot;&quot;,&quot;&quot;]}]}}}],&quot;templateId&quot;:&quot;ConditionalColumn&quot;}" Version="5" />
+            <Field AppendOnly="FALSE" DisplayName="Description" Format="Dropdown" IsModern="TRUE" IsolateStyles="FALSE" Name="Description" RichText="FALSE" RichTextMode="Compatible" Title="Description" Type="Note" ID="{fb865a25-5d08-4fc1-aeab-10ef9db61768}" SourceID="{{listid:Service Health Notifications}}" StaticName="Description" ColName="ntext2" RowOrdinal="0" />
+            <Field AppendOnly="FALSE" DisplayName="Messages" Format="Dropdown" IsModern="TRUE" IsolateStyles="FALSE" Name="Messages" RichText="FALSE" RichTextMode="Compatible" Title="Messages" Type="Note" ID="{c7195e5a-527d-4aaf-84b3-32fd85deecc8}" SourceID="{{listid:Service Health Notifications}}" StaticName="Messages" ColName="ntext3" RowOrdinal="0" />
+            <Field DisplayName="Status" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Status" Title="Status" Type="Text" ID="{7e868aef-ace0-4c4c-bccd-4e03d83cbfa9}" SourceID="{{listid:Service Health Notifications}}" StaticName="Status" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="Feature" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Feature" Title="Feature" Type="Text" ID="{4b246ad0-4003-417d-b727-0b703f7811a8}" SourceID="{{listid:Service Health Notifications}}" StaticName="Feature" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="Start Time" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="StartTime" Title="Start Time" Type="Text" ID="{2203b2eb-dca2-4841-8294-c1405df3f5e9}" SourceID="{{listid:Service Health Notifications}}" StaticName="StartTime" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="Last Updated Time" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="LastUpdatedTime" Title="Last Updated Time" Type="Text" ID="{ae2d839b-ae1f-4491-8574-740efb8eb8a9}" SourceID="{{listid:Service Health Notifications}}" StaticName="LastUpdatedTime" ColName="nvarchar8" RowOrdinal="0" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Classification" Format="Dropdown" MaxLength="255" Name="Clasification" Title="Classification" Type="Text" ID="{f2c9a143-993b-43d8-bc97-c35a6e47467f}" Version="2" StaticName="Clasification" SourceID="{{listid:Service Health Notifications}}" ColName="nvarchar9" RowOrdinal="0" />
+            <Field DisplayName="Severity" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Severity" Title="Severity" Type="Text" ID="{70efe314-9221-4d9f-8527-5c5f9b43d089}" SourceID="{{listid:Service Health Notifications}}" StaticName="Severity" ColName="nvarchar10" RowOrdinal="0" />
+            <Field DisplayName="Incident Type" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="IncidentType" Title="Incident Type" Type="Text" ID="{57cf1317-a662-462a-b4f2-a26577692581}" SourceID="{{listid:Service Health Notifications}}" StaticName="IncidentType" ColName="nvarchar11" RowOrdinal="0" />
+            <Field DisplayName="End Time" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="EndTime" Title="End Time" Type="Text" ID="{9ae9cb54-34ba-4dfc-86b3-e180110bb63a}" SourceID="{{listid:Service Health Notifications}}" StaticName="EndTime" ColName="nvarchar12" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://southcentralus1.pushnp.svc.ms/notifications?token=f7743c32-d449-4076-8b88-e42ef5103344" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

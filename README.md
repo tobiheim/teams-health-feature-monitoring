@@ -2,7 +2,6 @@
 Microsoft Teams Status Health and Message Center Notifications to SharePoint List and Teams
 
 
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 - [teams-health-feature-monitoring](#teams-health-feature-monitoring)
@@ -17,11 +16,9 @@ Microsoft Teams Status Health and Message Center Notifications to SharePoint Lis
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
-<!-- * [Acknowledgements](#acknowledgements)-->
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -35,7 +32,6 @@ Here's a blank template to get started:
 
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -88,8 +84,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@saibothe](https://twitter.com/saibothe) - tobias.heim@outlook.com
-
-Project Link: [https://github.com/tobiheim/teams-health-feature-monitoring](https://github.com/tobiheim/teams-health-feature-monitoring)
-
+Tobias Heim - [@saibothe](https://twitter.com/saibothe)
 
