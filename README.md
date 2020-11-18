@@ -1,5 +1,5 @@
 # teams-health-feature-monitoring
-Microsoft Teams Status Health and Message Center Notifications to SharePoint List and Teams
+Microsoft Teams Service Health and Message Center Notifications to SharePoint List and Teams
 
 
 ## Table of Contents
@@ -17,20 +17,16 @@ Microsoft Teams Status Health and Message Center Notifications to SharePoint Lis
   - [License](#license)
   - [Contact](#contact)
 
-
-
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-
+The project includes a simple Power Automate solution to stay informated about the Microsoft Teams Service Health status and upcoming changes to service that may require admininstrator attention.
 
 ### Built With
 
 * [Power Automate](https://us.flow.microsoft.com/)
-
-
+* SharePoint Online Lists
 
 ## Getting Started
 
@@ -38,7 +34,13 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+The solution require an Office 365 subscription including the following:
+
+- Microsoft Teams license
+- Power Automate license
+- SharePoint and OneDrive license
+- Access to Azure AD
+- SharePoint Online PnP PowerShell Module
 
 
 ### Installation
@@ -47,13 +49,24 @@ This is an example of how to list things you need to use the software and how to
 ```sh
 git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 ```
-1. 
+1. Create a SharePoint site or a Team
+
+> [!NOTE]
+> You can also use a already existing team or SharePoint site. 
+
+1. Create an App Registration in Azure AD
+
+1. Import the SharePoint lists
+
+1. Import the Power Automate flow
+
+1. Adjust the values in the Power Automate
 
 
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
 
 
