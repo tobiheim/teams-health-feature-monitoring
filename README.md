@@ -70,39 +70,39 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    Create a new registration:
    
-   ![Create App Registration](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar01.png)
+   ![Create App Registration](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar1.png)
 
    Provide a name to your new app and register it.
 
-   ![Name and register App Registration](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar02.png)
+   ![Name and register App Registration](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar2.png)
 
    Next you need to add permissions to your app registration.
 
-   ![View permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar03.png)
+   ![View permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar3.png)
 
    Select **Add a permission**
 
-   ![Add permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar04.png)
+   ![Add permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar4.png)
 
    Select **Office 365 Manangement APIs**
 
-   ![Select Mgmt API](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar05.png)
+   ![Select Mgmt API](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar5.png)
 
    Next select **Application permissions**
 
-   ![Select app permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar06.png)
+   ![Select app permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar6.png)
 
    Select the permissions listed in the screenshot below:
 
-   ![Select the required permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar07.png)
+   ![Select the required permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar7.png)
   
    Don't forget to grant admin consent for your organisation.
 
-   ![Grant admin permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar08.png)
+   ![Grant admin permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar8.png)
 
    As last step you need to create a client secret for your app.
 
-   ![Create client sec](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar09.png)
+   ![Create client sec](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar9.png)
 
    Make sure to copy the secret. You will need it later.
 
@@ -114,11 +114,11 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
 #### 2. Create a SharePoint site
    
-   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp01.png)
+   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp1.png)
 
    Select a Modern Team Site and add the required members and owners.
 
-   ![Select Teams site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp02.png)
+   ![Select Teams site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp2.png)
 
    **Note:** You can also use a already existing modern SharePoint site. 
 
@@ -134,17 +134,17 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    `Connect-PnPOnline -Url "https://{Vanity domain host name}.sharepoint.com/sites/{Your site name}`
 
-   ![Connect to SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp03.png)
+   ![Connect to SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp3.png)
 
    The list template is part of this repo. You can apply it using the following cmdlet.
 
    `Apply-PnPProvisioningTemplate -Path "C:\Temp\SP_Lists_Template_TeamsHealthandFeatureUpdates_v1.0.xml" -Handlers Lists`
 
-   ![Apply the SP template](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp04.png)
+   ![Apply the SP template](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp4.png)
 
    After you applied the template you should see the following newly created lists.
 
-   ![Verify the lists](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp05.png)
+   ![Verify the lists](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp5.png)
 
 #### 4. Import the Power Automate flow
    
@@ -152,33 +152,33 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
    
    Select Import to add the flow template to your environment.
 
-   ![Select flow import](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa01.png)
+   ![Select flow import](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa1.png)
 
    When you import the flow you need to make sure to replace the existing connections as shown below:
 
-   ![Replace the connections](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa02.png)
+   ![Replace the connections](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa2.png)
 
    After you replaced all the connections the import screen should look like this:
 
-   ![flow import view](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa03.png)
+   ![flow import view](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa3.png)
 
    Finally you can import the flow to your environment.
 
-   ![final view after flow import](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa04.png)
+   ![final view after flow import](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa4.png)
 
-   ![flow succesful import](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa05.png)
+   ![flow succesful import](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa5.png)
 
 #### 5. Adjust the values in the Power Automate
    As every last step you need to adjust the OneDrive, SharePoint and Teams connections inside the flow.
 
    First you need to upload the logos you want to use to a OneDrive for Business Location and add the path to the following steps.  
-   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa07.png)
+   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa7.png)
 
    Next you need to adjust the app registration information as showing in the following example:  
-   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa08.png)
+   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa8.png)
 
    You need to adjust 6 times the SharePoint steps *(Make sure to select the correct list)*.  
-   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa09.png)
+   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa9.png)
 
    Last but not least you need to adjust the Teams steps to your channel (3 times).  
    ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa10.png)
@@ -193,14 +193,14 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 **Service Incidents:**  
 The flow will check for any Microsoft Teams or Skype for Business Online Service Degradation and store this information to a SharePoint list.
 
-![Incident List](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage01.png)
+![Incident List](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage1.png)
 
 As you can see the list template is configured with **conditional formatting** to highlight every degradated (red) and restored (green) service.
 
 In addition to the list the flow will also post directly to a defined Teams channel. This way the admins stay informed without the need of checking the service health section in the Office 365 admin center all the time or rely on notification mails that spams thier inbox.
 
 Here and example post:  
-![Incident Post](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage02.png)
+![Incident Post](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage2.png)
 
 **Note:** The degradation posts include more details then the restored post (degredation status and description).
 
@@ -211,12 +211,12 @@ The message center notification follows the same approach. Every Teams related e
 The list also includes pre-defined conditional formatting to highlight every entry that is tagged a "Plan for Change".
 
 Here an example:  
-![MC List](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage03.png)
+![MC List](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage3.png)
 
 Furtermore any entry that requires a "Call to Action" will be posted to Teams as well.
 
 Example post:  
-![MC List](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage04.png)
+![MC List](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage4.png)
 
 *The solution is designed for Microsoft Teams but can also be used for all Office 365 services.*
 You only need to change the filter inside the flow.
