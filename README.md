@@ -32,7 +32,7 @@ The project includes a simple Power Automate solution to stay informated about t
 
 The flow will fetch every **20 Minutes** the latest updates of the Office 365 Service Health and the Message Center using the Office 365 Management API and post them to Teams (if required) and store the information to SharePoint lists.
 
-*The solution is designed for Microsoft Teams but can also be used for all Office 365 services.*
+*The solution is designed for Microsoft Teams but can also be used for all other Office 365 services.*
 
 ### Built With
 
@@ -123,7 +123,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    To create a new SharePoint Page navigate to SharePoint Online using the Hamburger Menu in the top right corner.
 
-   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_hamb.png) 
+   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_hamb1.png) 
 
    As soon as the landing page loaded copy the URL. You will need it later.
 
@@ -173,12 +173,12 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    ![Replace the connections](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa2.png)
 
-   The connectors are use for the following reasons:
+   The connectors are used for the following reasons:
 
    
 |**Connector** |Description  |
 |---------|---------|
-|OneDrive for Business    |This connector is used to store the product logo files.        |
+|OneDrive for Business    |This connector is used to fetch the product logo files from OneDrive.        |
 |SharePoint Online     |This connector is used to connect and write to the SharePoint lists.         |
 |Microsoft Teams     |Required to post messages to a Teams channel.        |
 |Content Conversion    |Required to convert HTML to plain text.         |  
@@ -256,7 +256,7 @@ You only need to change the filter inside the flow.
 ## Roadmap
 
 Next up is to add a planner step for any "Call to Action" Message Center notifications to follow up with these items.
-Also I plan to add samples for each Office 365 workload and the required filters.
+Also there is a plan to add samples for each Office 365 workload and the required filters.
 
 See the [open issues](https://github.com/tobiheim/teams-health-feature-monitoring/issues) for a list of proposed features (and known issues).
 
