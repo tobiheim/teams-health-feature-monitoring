@@ -206,7 +206,11 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    You need to adjust 6 times the SharePoint steps *(Make sure to select the correct list)*.  
 
-   In the **left side** of the Flow tree you need to select the **Service Health Notifications** list and in the **right side** please select the **Message Center Notifications** list.
+   The flow is divided into two trees, each to control a specific aspect of the monitoring:
+    a. **Left hand side tree** to monitor a product health status (in this case Microsoft Teams and SfBO)
+    b. **Right hand side tree** to monitor the Message Center Notifications
+
+   The flow is shipped with two SharePoint lists that you imported earlier, in the Service Health Status side of the flow-tree, you need to point all SharePoint lists flow steps to Service Health Notification SharePoint List, the same for the Message Center Notification flow-tree but by pointing to the Message Center Notification SharePoint list instead.
 
    ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa_tree.png)   
 
