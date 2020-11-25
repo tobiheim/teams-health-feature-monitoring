@@ -277,4 +277,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Tobias Heim - [@saibothe](https://twitter.com/saibothe)
+Tobias Heim - [@saibothe](https://twitter.com/saibothe)  
+
+**Thanks a lot to:**  
+Mostafa Eid [@Lyncdude](https://twitter.com/Lyncdude) for contributing to the documentation.
