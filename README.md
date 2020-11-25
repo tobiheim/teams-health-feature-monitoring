@@ -85,7 +85,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    Next you need to add permissions to your app registration.
 
-   ![View permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar3.png)
+   <img src="https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar3.png" alt="View permissions" width="150"/>
 
    Select **Add a permission**
 
@@ -123,7 +123,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    To create a new SharePoint Page navigate to SharePoint Online using the Hamburger Menu in the top right corner.
 
-   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_hamb1.png) 
+   <img src="https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_hamb1.png" alt="Your image title" width="150"/>
 
    As soon as the landing page loaded copy the URL. You will need it later.
 
