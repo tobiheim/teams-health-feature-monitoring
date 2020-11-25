@@ -32,7 +32,7 @@ The project includes a simple Power Automate solution to stay informed about the
 
 The flow will fetch every **20 Minutes** the latest updates from the Office 365 Service Health Status and the Message Center using the Office 365 Management API and post them to Teams (if required) and store the information to SharePoint lists.
 
-*The solution is designed for Microsoft Teams but can also be used for all other Office 365 services by simply chancing the filters inside the flow.*
+*The solution is designed for Microsoft Teams but can also be used for all other Office 365 services by simply changing the filters inside the flow.*
 
 ### Built With
 
