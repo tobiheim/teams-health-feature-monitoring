@@ -101,7 +101,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    ![Select the required permissions](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/ar7.png)
   
-   After selecting the permissions, you need to click **Add permission** to transmit to the next step.
+   After selecting the permissions, click **Add permission**.
 
    Don't forget to grant admin consent for your organization.
 
@@ -118,13 +118,9 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
 #### 2. Create a SharePoint site
 
-   To create a new SharePoint page navigate to SharePoint Online using the hamburger menu in the top right corner.
+   To create a new SharePoint page navigate to SharePoint Online using the menu in the top right corner.
 
    ![Navigate to SP](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_hamb1.png)  
-
-   As soon as the landing page loaded copy the URL. You will need it later.
-
-   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_url.png)  
 
    ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp1.png)
 
@@ -133,6 +129,10 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
    ![Select Teams site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp2.png)
 
    **Note:** You can also use a already existing modern SharePoint site.  
+
+   Copy the URL of the SharePoint site. You will need it later.
+
+   ![Create SP site](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/sp_url.png)  
 
 #### 3. Import the SharePoint lists
 
