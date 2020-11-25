@@ -171,7 +171,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
    ![Replace the connections](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa2.png)
 
    More details how to replace the connections can be found here:
-   https://docs.microsoft.com/en-us/power-automate/add-manage-connections
+   https://docs.microsoft.com/en-us/power-automate/add-manage-connections  
    https://docs.microsoft.com/en-us/power-automate/create-team-flows#modify-a-connection  
    
    The included connections are used for the following reasons:  
