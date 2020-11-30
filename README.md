@@ -202,8 +202,10 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
    First you need to upload the logos you want to use to a OneDrive for Business location and add the path to the following steps.  
    ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa7.png)
 
+   **Note:** The images in the Teams post will be displayed as long as the link to it is valid. It will expire over time. You can use a variable that points to any kind of web server as a replacement for the OneDrive Thumbnail approach.
+
    Next you need to adjust the app registration information as showing in the following example:  
-   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa8.png)
+   ![Logo path](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/pa8_new.png)
 
    You need to adjust 6 times the SharePoint steps *(Make sure to select the correct list)*.  
 
@@ -256,8 +258,11 @@ Example post:
 
 ## Roadmap  
 
-Next up is to add a planner step for any "Call to Action" Message Center notifications to follow up with these items.
-Also there is a plan to add samples for each Office 365 workload and the required filters.
+The following item are on the Roadmap:
+
+- Add a planner step for any "Call to Action" Message Center notifications to follow up with these items
+- Add samples for each Office 365 workload and the required filters
+- Image location alternative using Azure Storage
 
 See the [open issues](https://github.com/tobiheim/teams-health-feature-monitoring/issues) for a list of proposed features (and known issues).
 
