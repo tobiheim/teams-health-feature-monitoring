@@ -239,9 +239,6 @@ In addition to the list the flow will also post directly to a defined Teams chan
 Here an example of a service degradation post:  
 ![Incident Post](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/service_deg.png)
 
-
-**Note:** The degradation posts include more details then the restored post (degradation status and description).
-
 The admin can directly access the SharePoint item using the button "Go to item" in the post to see more details.
 
 **Feature Updates:**  
