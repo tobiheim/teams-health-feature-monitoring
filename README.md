@@ -28,7 +28,7 @@ Microsoft Teams Service Health and Message Center Notifications as Teams posts a
 
 The project includes a simple Power Automate solution to stay informed about the Microsoft Teams Service Health status and upcoming changes to the service that may require administrator or end-user attention.  
 
-![Solution Image](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/main_img.png)
+![Solution Image](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/main_img_new.png)
 
 The flow will fetch every **20 Minutes** the latest updates from the Office 365 Service Health Status and the Message Center using the Office 365 Management API and post them to Teams (if required) and store the information to SharePoint lists.
 
@@ -236,8 +236,9 @@ As you can see the list template is configured with **conditional formatting** t
 
 In addition to the list the flow will also post directly to a defined Teams channel. This way the admins stay informed without the need of checking the service health section in the Office 365 admin center all the time or subscribe to the notification mails that spams their inbox.
 
-Here and example post:  
-![Incident Post](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/usage2.png)
+Here an example of a service degradation post:  
+![Incident Post](https://www.saibot-lab.com/GitHub/teams_health_feature_monitoring/service_deg.png)
+
 
 **Note:** The degradation posts include more details then the restored post (degradation status and description).
 
