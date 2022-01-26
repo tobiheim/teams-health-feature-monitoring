@@ -1,6 +1,8 @@
 # teams-health-feature-monitoring
 Microsoft Teams Service Health and Message Center Notifications as Teams posts and to SharePoint lists.
 
+> :warning: **The API in this example is depracated**. Please use MSGraph to access the Service Health and Message Center posts. This sample project need to be updated to the new API. More details can be found here: [Service Communications API](https://docs.microsoft.com/en-us/graph/api/resources/service-communications-api-overview?view=graph-rest-1.0&preserve-view=true)
+
 
 ## Table of Contents
 
