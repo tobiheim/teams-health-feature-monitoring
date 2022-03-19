@@ -1,4 +1,8 @@
 # teams-health-feature-monitoring
+
+| [About The Project](#about-the-project) | [Usage](#usage) | [Prerequisites](#prerequisites) | [Installation](#Installation)
+| ---- | ---- | ---- | ---- | 
+
 Microsoft Teams Service Issues and Message Center Notifications as Teams posts and stored to SharePoint lists. All you need is one Power Automate (incl. SharePoint site and Teams channel) to stay informed.
 
 :mega: **Note for V1 users:**  
