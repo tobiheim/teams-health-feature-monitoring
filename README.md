@@ -5,7 +5,7 @@ Microsoft Teams Service Issues and Message Center Notifications as Teams posts a
 If you already using the previous version of this solution (depracated Service Communications API), then please follow the steps in the guide to update your existing version to the new version. I will soon add a wiki page that explains the upgrade process from v1 to v2 in greater detail.  
 :zap: In Short: The SharePoint List requires new columns and the app registration require new permissions. 
 
-**Whats new in V2** :question:
+**Whats new in V2**:question:
 - Power Automate uses now the new Graph API ([serviceAnnouncement](https://docs.microsoft.com/en-us/graph/api/resources/serviceannouncement?view=graph-rest-1.0))
 - Message Center and Service issues Teams posts will now included the full message (HTML-based incl. links and images)
 - No additional image location required (OneDrive for Business)
