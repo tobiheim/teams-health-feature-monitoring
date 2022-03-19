@@ -236,18 +236,14 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 ## Usage  
 
 **Service Issues:**  
-The flow will check for any Microsoft Teams message that are classified as **Service Degradation** and store this information to a SharePoint list.
+The flow will check for any Microsoft Teams related issues that are classified as **Service Degradation** and store this information to a SharePoint list.
 
 As you can see the list template is configured with **conditional formatting** to highlight every degradated (red) and restored (green) service.
 
 In addition to the list the flow will also post directly to a defined Teams channel. This way the admins stay informed without the need of checking the service health section in the Office 365 admin center all the time or subscribe to the notification mails that spams their inbox.
 
 **Feature Updates:**  
-The message center notification follows the same logic. Every Teams related entry will be stored in a SharePoint list.
-
-The list also includes pre-defined **conditional formatting** to highlight every entry that is tagged a "Plan for Change".
-
-Updates to the service will also be posted to Teams in case they require admin or user attention.
+The message center notification follows the same logic. Every Teams related entry will be stored in a SharePoint list. The list also includes pre-defined **conditional formatting** to highlight every entry that is tagged a "Plan for Change". Updates to the service will also be posted to Teams in case they require admin or user attention.
 
 Here two examples:
 
