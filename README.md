@@ -54,6 +54,7 @@ The Power Automate will fetch every **20 Minutes** the latest updates from the O
 
 * [Power Automate](https://us.flow.microsoft.com/)
 * SharePoint Online Lists
+* Graph API ([serviceAnnouncement](https://docs.microsoft.com/en-us/graph/api/resources/serviceannouncement?view=graph-rest-1.0))
 
 ## Getting Started
 
@@ -66,7 +67,6 @@ The solution require an Office 365 subscription including the following:
 - Microsoft Teams license
 - Power Automate license (Premium Connector)
 - SharePoint license
-- Graph API ([serviceAnnouncement](https://docs.microsoft.com/en-us/graph/api/resources/serviceannouncement?view=graph-rest-1.0))
 - PnP PowerShell Module (SharePoint Online)
 - Access to Azure AD to create App Registration
 
