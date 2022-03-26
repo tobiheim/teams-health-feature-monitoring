@@ -6,12 +6,13 @@
 Microsoft Teams Service Issues and Message Center Notifications as Teams posts and stored to SharePoint lists. All you need is one Power Automate (incl. SharePoint site and Teams channel) to stay informed.
 
 :mega: **Note for V1 users:**  
-If you already using the previous version of this solution (depracated Service Communications API), then please follow the steps in the guide to update your existing version to the new version. I will soon add a wiki page that explains the upgrade process from v1 to v2 in greater detail.  
+If you already using the previous version of this solution (depracated Service Communications API), then please follow the steps in the guide to update your existing version to the new version.  
 :zap: In Short: The SharePoint List requires new columns and the app registration require new permissions. 
 
 **Whats new in V2**:question:
 - Power Automate uses now the new Graph API ([serviceAnnouncement](https://docs.microsoft.com/en-us/graph/api/resources/serviceannouncement?view=graph-rest-1.0))
 - Message Center and Service issues Teams posts will now included the full message (HTML-based incl. links and images)
+- All Message Center notifications will be posted to Microsoft Teams.
 - No additional image location required (OneDrive for Business)
 
 
@@ -31,8 +32,9 @@ If you already using the previous version of this solution (depracated Service C
       - [4. Import the Power Automate flow](#4-import-the-power-automate-flow)
       - [5. Adjust the values in the Power Automate](#5-adjust-the-values-in-the-power-automate)
   - [Usage](#usage)
+  - [Other Workloads](#other-workloads)
+  - [Follow-ups (Tasks)](#follow-ups-tasks)
   - [Roadmap](#roadmap)
-  - [Follow-ups](#follow-ups)
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
@@ -64,6 +66,7 @@ The solution require an Office 365 subscription including the following:
 - Microsoft Teams license
 - Power Automate license (Premium Connector)
 - SharePoint license
+- Graph API ([serviceAnnouncement](https://docs.microsoft.com/en-us/graph/api/resources/serviceannouncement?view=graph-rest-1.0))
 - PnP PowerShell Module (SharePoint Online)
 - Access to Azure AD to create App Registration
 
@@ -227,7 +230,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    ![Logo path](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa9.png)
 
-   Last but not least you need to adjust the Teams steps to your channel (2 times).  
+   Last but not least you need to adjust the Teams steps to your channel (3 times).  
    ![Logo path](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa10_new.png)
 
    **Note:** You could separate the incident posts from the message center posts into different channels if needed.
@@ -253,21 +256,29 @@ Here two examples:
 **Teams Post**  
 ![MC Post](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/mc01.png)
 
+## Other Workloads
+
+You can use the flow also for any other M365 Workload. All you need to do is to adjust the following filters in flow:
+
+![MC Post](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/filters.png)
+
+Next you need to adjust the HTML of the Teams posts (only the Title) to reflect the correct workload.
+
+## Follow-ups (Tasks)
+
+If you want to take action on any of the Teams posts then use **Tasks** in Teams.
+
+![Tasks01](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/tasks01.png)  
+
+![Tasks02](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/tasks02.png)  
 
 ## Roadmap  
 
 The following item are on the Roadmap:
 
-- Add samples for each Office 365 workload and the required filters
+- Currently nothing planned.
 
 See the [open issues](https://github.com/tobiheim/teams-health-feature-monitoring/issues) for a list of proposed features (and known issues).
-
-## Follow-ups
-
-If you want to take action on any of the Teams posts then use **Tasks** in Teams.
-
-![Tasks](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/tasks.png)
-
 
 ## Contributing
 
