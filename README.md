@@ -44,7 +44,7 @@ If you already using the previous version of this solution (depracated Service C
 
 The project includes **one** simple Power Automate solution to stay informed about the Microsoft Teams Service issues and upcoming changes to the service that may require administrator or end-user attention. :rocket:  
 
-  ![Intro](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/intro_temp.png)
+  ![Intro](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/intro_new.png)
 
 The Power Automate will fetch every **20 Minutes** the latest updates from the Office 365 Service Health Status and the Message Center using the Graph API and post them to Teams (if required) and store the information to SharePoint lists.
 
@@ -254,7 +254,7 @@ Here two examples:
 ![MC SP](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/mcsp01.png)  
 
 **Teams Post**  
-![MC Post](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/mc01.png)
+![MC Post](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/mc01_new.png)
 
 ## Other Workloads
 
