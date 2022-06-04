@@ -6,7 +6,7 @@
 Microsoft Teams Service Issues and Message Center Notifications as Teams posts and stored to SharePoint lists. All you need is one Power Automate (incl. SharePoint site and Teams channel) to stay informed.
 
 :mega: **Note for V1 users:**  
-If you already using the previous version of this solution (depracated Service Communications API), then please follow the steps in the guide to update your existing version to the new version.  
+If you already using the previous version of this solution (deprecated Service Communications API), then please follow the steps in the guide to update your existing version to the new version.  
 :zap: In Short: The SharePoint List requires new columns and the app registration require new permissions. 
 
 **Whats new in V2**:question:
@@ -241,7 +241,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 **Service Issues:**  
 The flow will check for any Microsoft Teams related issues that are classified as **Service Degradation** and store this information to a SharePoint list.
 
-As you can see the list template is configured with **conditional formatting** to highlight every degradated (red) and restored (green) service.
+As you can see the list template is configured with **conditional formatting** to highlight every degraded (red) and restored (green) service.
 
 In addition to the list the flow will also post directly to a defined Teams channel. This way the admins stay informed without the need of checking the service health section in the Office 365 admin center all the time or subscribe to the notification mails that spams their inbox.
 
