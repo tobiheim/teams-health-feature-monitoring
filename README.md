@@ -173,7 +173,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    After you applied the template you should see the following newly created lists. If not, please refresh the browser.
 
-   ![Verify the lists](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp5_new.png)
+   ![Verify the lists](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp5_update.png)
 
 #### 4. Import the Power Automate flow  
 
