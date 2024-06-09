@@ -3,18 +3,7 @@
 | [About The Project](#about-the-project) | [Usage](#usage) | [Prerequisites](#prerequisites) | [Installation](#installation)
 | ---- | ---- | ---- | ---- | 
 
-Microsoft Teams Service Issues and Message Center Notifications as Teams posts and stored to SharePoint lists. All you need is one Power Automate (incl. SharePoint site and Teams channel) to stay informed.
-
-:mega: **Note for V1 users:**  
-If you already using the previous version of this solution (deprecated Service Communications API), then please follow the steps in the guide to update your existing version to the new version.  
-:zap: In Short: The SharePoint List requires new columns and the app registration require new permissions. 
-
-**Whats new in V2**:question:
-- Power Automate uses now the new Graph API ([serviceAnnouncement](https://docs.microsoft.com/en-us/graph/api/resources/serviceannouncement?view=graph-rest-1.0))
-- Message Center and Service issues Teams posts will now included the full message (HTML-based incl. links and images)
-- All Message Center notifications will be posted to Microsoft Teams.
-- No additional image location required (OneDrive for Business)
-
+Microsoft Teams Message Center and Service Health Notifications as Teams posts and stored to SharePoint lists. With just one Power Automate flow (including a SharePoint site and Teams channel), you can stay informed about anything important for Microsoft Teams.
 
 ## Table of Contents
 
@@ -44,7 +33,7 @@ If you already using the previous version of this solution (deprecated Service C
 
 The project includes **one** simple Power Automate solution to stay informed about the Microsoft Teams Service issues and upcoming changes to the service that may require administrator or end-user attention. :rocket:  
 
-  ![Intro](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/intro_new.png)
+  ![Intro](Documentation/images/intro_new.png)
 
 The Power Automate will fetch every **20 Minutes** the latest updates from the Office 365 Service Health Status and the Message Center using the Graph API and post them to Teams (if required) and store the information to SharePoint lists.
 
@@ -84,72 +73,72 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    First open the Azure AD Portal (https://aad.portal.azure.com) and select **App registrations**.  
 
-   ![Create App Registration](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/azure_portal.png)
+   ![Create App Registration](Documentation/images/azure_portal.png)
 
    Create a new registration:  
 
-   ![Create App Registration](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar1.png)
+   ![Create App Registration](Documentation/images/ar1.png)
 
    Provide a name to your new app and select the supported account type as shown in the screenshot below. Now you can register the app.
 
-   ![Name and register App Registration](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar2.png)
+   ![Name and register App Registration](Documentation/images/ar2.png)
 
    Also copy the **Application ID** and the **Tenant ID** from the overview section.
 
-   ![Copy app id and tenant id](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar11.png)
+   ![Copy app id and tenant id](Documentation/images/ar11.png)
 
    Next you need to add permissions to your app registration.
 
-   ![View permissions](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar3.png)
+   ![View permissions](Documentation/images/ar3.png)
 
    Select **Add a permission**
 
-   ![Add permissions](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar4.png)
+   ![Add permissions](Documentation/images/ar4.png)
 
    Select **Graph API**
 
-   ![Select Mgmt API](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar5_new.png)
+   ![Select Mgmt API](Documentation/images/ar5_new.png)
 
    Next select **Application permissions**
 
-   ![Select app permissions](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar6.png)
+   ![Select app permissions](Documentation/images/ar6.png)
 
    Select the permissions listed in the screenshot below:
 
-   ![Select the required permissions](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar7_new.png)
+   ![Select the required permissions](Documentation/images/ar7_new.png)
   
    After selecting the permissions, click **Add permission**.
 
    Don't forget to grant admin consent for your organization.
 
-   ![Grant admin permissions](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar8_new.png)
+   ![Grant admin permissions](Documentation/images/ar8_new.png)
 
    As last step you need to create a client secret for your app.  
    **Note:** It is up to you what name and expiration time you select based on your requirements.
 
-   ![Create client sec](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar9.png)
+   ![Create client sec](Documentation/images/ar9.png)
 
    Make sure to copy the client secret. You will need it later.
 
-   ![Copy client sec](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/ar10.png)  
+   ![Copy client sec](Documentation/images/ar10.png)  
 
 #### 2. Create a SharePoint site
 
    To create a new SharePoint page navigate to SharePoint Online using the menu in the top right corner.
 
-   ![Navigate to SP](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp_hamb1.png)  
+   ![Navigate to SP](Documentation/images/sp_hamb1.png)  
 
-   ![Create SP site](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp1.png)
+   ![Create SP site](Documentation/images/sp1.png)
 
    Select a Modern Team Site and add the required members and owners.
 
-   ![Select Teams site](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp2_new.png)
+   ![Select Teams site](Documentation/images/sp2_new.png)
 
    **Note:** You can also use a already existing modern SharePoint site.  
 
    Copy the URL of the SharePoint site. You will need it later.
 
-   ![Create SP site](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp_url.png)  
+   ![Create SP site](Documentation/images/sp_url.png)  
 
 #### 3. Import the SharePoint lists
 
@@ -163,17 +152,17 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    `Connect-PnPOnline -Url "https://{Vanity domain host name}.sharepoint.com/sites/{Your site name} -Interactive`
 
-   ![Connect to SP site](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp3_new.png)
+   ![Connect to SP site](Documentation/images/sp3_new.png)
 
    The list template is part of this repo. You can apply it using the following cmdlet.
 
    `Invoke-PnPSiteTemplate -Path C:\Temp\SP_Lists_Template_TeamsHealthandFeatureMon_v2.xml -Handlers Lists`
   
-   ![Apply the SP template](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp4_new.png)
+   ![Apply the SP template](Documentation/images/sp4_new.png)
 
    After you applied the template you should see the following newly created lists. If not, please refresh the browser.
 
-   ![Verify the lists](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/sp5_update.png)
+   ![Verify the lists](Documentation/images/sp5_update.png)
 
 #### 4. Import the Power Automate flow  
 
@@ -181,11 +170,11 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    Select **Import** to add the flow template to your environment.
 
-   ![Select flow import](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa1.png)
+   ![Select flow import](Documentation/images/pa1.png)
 
    When you import the flow you need to make sure to replace the existing connections as shown below:
 
-   ![Replace the connections](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa2_new.png)
+   ![Replace the connections](Documentation/images/pa2_new.png)
 
    More details how to replace the connections can be found here:  
    https://docs.microsoft.com/en-us/power-automate/add-manage-connections  
@@ -203,20 +192,20 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    After you replaced all the connections the import screen should look like this:
 
-   ![flow import view](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa3_new.png)
+   ![flow import view](Documentation/images/pa3_new.png)
 
    Finally you can import the flow to your environment.
 
-   ![final view after flow import](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa4_new.png)
+   ![final view after flow import](Documentation/images/pa4_new.png)
 
-   ![flow successful import](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa5.png)
+   ![flow successful import](Documentation/images/pa5.png)
 
 #### 5. Adjust the values in the Power Automate  
 
    As very last step you need to adjust the SharePoint and Teams connections inside the flow.
 
    First you need to adjust the app registration information as showing in the following example:  
-   ![Logo path](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa8_new.png)
+   ![Logo path](Documentation/images/pa8_new.png)
 
    You need to adjust 6 times the SharePoint steps *(Make sure to select the correct list)*.  
 
@@ -226,12 +215,12 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    The flow is shipped with two SharePoint lists that you imported earlier, in the service issues side of the flow-tree, you need to point all SharePoint lists flow steps to Service Health Notification SharePoint List, the same for the Message Center Notification flow-tree but by pointing to the Message Center Notification SharePoint list instead.
 
-   ![Logo path](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa_tree_new.png)   
+   ![Logo path](Documentation/images/pa_tree_new.png)   
 
-   ![Logo path](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa9.png)
+   ![Logo path](Documentation/images/pa9.png)
 
    Last but not least you need to adjust the Teams steps to your channel (3 times).  
-   ![Logo path](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/pa10_new.png)
+   ![Logo path](Documentation/images/pa10_new.png)
 
    **Note:** You could separate the incident posts from the message center posts into different channels if needed.
 
@@ -251,16 +240,16 @@ The message center notification follows the same logic. Every Teams related entr
 Here two examples:
 
 **SharePoint List** 
-![MC SP](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/mcsp01.png)  
+![MC SP](Documentation/images/mcsp01.png)  
 
 **Teams Post**  
-![MC Post](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/mc01_new.png)
+![MC Post](Documentation/images/mc01_new.png)
 
 ## Other Workloads
 
 You can use the flow also for any other M365 Workload. All you need to do is to adjust the following filters in flow:
 
-![MC Post](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/filters.png)
+![MC Post](Documentation/images/filters.png)
 
 Next you need to adjust the HTML of the Teams posts (only the Title) to reflect the correct workload.
 
@@ -268,9 +257,9 @@ Next you need to adjust the HTML of the Teams posts (only the Title) to reflect 
 
 If you want to take action on any of the Teams posts then use **Tasks** in Teams.
 
-![Tasks01](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/tasks01.png)  
+![Tasks01](Documentation/images/tasks01.png)  
 
-![Tasks02](https://www.tnext-labs.com/GitHub/teams_health_feature_monitoring/tasks02.png)  
+![Tasks02](Documentation/images/tasks02.png)  
 
 ## Roadmap  
 
