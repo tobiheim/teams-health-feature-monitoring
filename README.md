@@ -219,7 +219,7 @@ git clone https://github.com/tobiheim/teams-health-feature-monitoring.git
 
    ![Logo path](Documentation/images/pa9.png)
 
-   Last but not least you need to adjust the Teams steps to your channel (3 times).  
+   Last but not least you need to adjust the Teams steps to your channel (4 times).  
    ![Logo path](Documentation/images/pa10_new.png)
 
    **Note:** You could separate the incident posts from the message center posts into different channels if needed.
